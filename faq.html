@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQs | Tiny Tots Clinic | Dr. Devanshi Singhal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            background: #f9fbff;
+        }
+
+        header {
+            background: white;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img { height: 50px; }
+
+        .logo-section h1 {
+            font-size: 22px;
+            color: #4da6ff;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 25px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover { color: #4da6ff; }
+
+        section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2b7cd3;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2b7cd3;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 20px 20px;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        footer {
+            background: #2b7cd3;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="logo.jpg">
+        <h1>Tiny Tots Clinic</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#appointment">Appointment</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">When should I bring my newborn for the first checkup?</div>
+        <div class="faq-answer">Ideally within 3–5 days after birth, especially after discharge from hospital, to ensure feeding, weight gain and overall health are on track.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">What is the vaccination schedule for babies?</div>
+        <div class="faq-answer">Vaccinations start at birth and continue through childhood as per the Indian Academy of Pediatrics (IAP) schedule. Your pediatrician will guide you with a personalized plan.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">My child has frequent cough and cold. Is this normal?</div>
+        <div class="faq-answer">Yes, children can have 6–8 episodes per year, especially if they attend school. However, persistent or severe symptoms should be evaluated.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">My child is not eating properly. What should I do?</div>
+        <div class="faq-answer">Poor appetite is common in children. Focus on a balanced diet, avoid force-feeding, and consult a pediatrician if growth is affected.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">When should I worry about fever in my child?</div>
+        <div class="faq-answer">Fever above 100.4°F in infants under 3 months, or persistent high fever in older children, should be evaluated by a doctor.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">How do I know if my child’s growth is normal?</div>
+        <div class="faq-answer">Growth is monitored using weight, height and head circumference charts. Regular pediatric visits help track this accurately.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Do you provide newborn and infant care?</div>
+        <div class="faq-answer">Yes, comprehensive care for newborns and infants including feeding guidance, growth monitoring and vaccination is provided.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">When should developmental milestones be checked?</div>
+        <div class="faq-answer">Milestones are checked during routine visits. Early identification of delays helps in timely intervention.</div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Tiny Tots Clinic | Dr. Devanshi Singhal
+</footer>
+
+<script>
+    const faqs = document.querySelectorAll('.faq-item');
+
+    faqs.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
